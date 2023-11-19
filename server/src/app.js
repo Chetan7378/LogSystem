@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 //enter your databse link
 mongoose
-  .connect("mongodb+srv://root:root@cluster0.r5whdug.mongodb.net/test", {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
